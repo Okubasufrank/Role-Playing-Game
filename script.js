@@ -54,4 +54,4 @@ function fightDragon(){
 function buyHealth(){}
 function buyWeapon(){}
 
-const locations = [];
+const locations = {{}];
