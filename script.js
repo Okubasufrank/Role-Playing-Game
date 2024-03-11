@@ -31,7 +31,7 @@ const locations = [
         name : "store",
         "button text" : ["Buy 10 Health (10 gold)", "Buy weapon (30 gold)", "Go to town square" ],
         "button functions" : [buyHealth, buyWeapon, goTown],
-        text : "You enter the store"  
+        text : "You enter the store."  
     }
 ];
 
@@ -58,6 +58,16 @@ function goStore(){
     button2.onclick = buyWeapon;
     button3.onclick = goTown;
     text.innerText = "You enter the store.";
+}
+
+function update(locations){
+    button1.innerText = "Go to store";
+    button2.innerText = "Go to cave";
+    button3.innerText = "Fight dragon";
+    button1.onclick = goStore;
+    button2.onclick = goCave;
+    button3.onclick = fightDragon;
+    text.innerText = "You are in the town square. You see a sign that says \"Store\".";
 }
 
 function goCave(){
