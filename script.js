@@ -52,7 +52,7 @@ function goTown(){
     text.innerText = "You are in the town square. You see a sign that says \"Store\".";*/
 
 function goStore(){
-    update();
+    update(locations);
 }
 
 /*button1.innerText = "Buy 10 Health (10 gold)";
