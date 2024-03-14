@@ -26,13 +26,18 @@ const locations = [
         "button functions" : [goStore, goCave, fightDragon],
         text : "You are in the town square. You see a sign that says \"Store\"."
     },
-
     {
         name : "store",
         "button text" : ["Buy 10 Health (10 gold)", "Buy weapon (30 gold)", "Go to town square" ],
         "button functions" : [buyHealth, buyWeapon, goTown],
         text : "You enter the store."  
-    }
+    },
+    {
+        name : "cave",
+        "button text" : ["Fight slime", "Fight fanged beast", "Go to town square" ],
+        "button functions" : [fightSlime, fightBeast, goTown],
+        text : "You enter the cave. You see some monsters."  
+    },
 ];
 
 //initialize buttons
@@ -41,7 +46,7 @@ button2.onclick = goCave;
 button3.onclick = fightDragon;
 
 function goTown(){
-
+    update(locations[0])
 }
 /*    button1.innerText = "Go to store";
     button2.innerText = "Go to cave";
@@ -77,7 +82,7 @@ function update(locations){
 }
 
 function goCave(){
-    console.log("Going to cave.");
+    update(locations[2]);
 }
 
 function fightDragon(){
