@@ -90,7 +90,8 @@ function fightDragon(){
 }
 
 function buyHealth(){
-    gold = gold - 10;
+    gold -= 10;
+    health +=0;
 }
 function buyWeapon(){}
 
