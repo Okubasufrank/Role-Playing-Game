@@ -64,7 +64,7 @@ button3.onclick = goTown;
 text.innerText = "You enter the store.";*/
 
 function update(locations){
-    button1.innerText = location["button text"];
+    button1.innerText = location["button text"][0];
     button2.innerText = "Go to cave";
     button3.innerText = "Fight dragon";
     button1.onclick = goStore;
