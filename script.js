@@ -4,7 +4,7 @@ let gold = 50;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
-let inventory = "sick"; 
+let inventory = ["sick"]; 
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -16,8 +16,14 @@ const healthText = document.querySelector("#heathlText");
 const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
-const monsterHealth = document.querySelector("#monsterHealth");
+const monsterHealthText = document.querySelector("#monsterHealth");
 
+const weapons =[
+    { name : "stick", power : 5,},
+    { name : "dagger", power : 30,},
+    { name : "claw hammer", power : 50,},
+    { name : "sword", power : 100,}
+];
 
 const locations = [
     {
@@ -45,9 +51,7 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
-function goTown(){
-    update(locations[0])
-}
+
 /*  button1.innerText = "Go to store";
     button2.innerText = "Go to cave";
     button3.innerText = "Fight dragon";
@@ -55,14 +59,6 @@ function goTown(){
     button2.onclick = goCave;
     button3.onclick = fightDragon;
     text.innerText = "You are in the town square. You see a sign that says \"Store\".";*/
-
-function goStore(){
-    update(locations[1]);
-}
-
-function fightSlime(){};
-
-function fightBeast(){};
 
 /*  button1.innerText = "Buy 10 Health (10 gold)";
     button2.innerText = "Buy weapon (30 gold)";
@@ -80,6 +76,14 @@ function update(locations){
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
     text.innerText = location.text;
+}
+
+function goTown(){
+    update(locations[0])
+}
+
+function goStore(){
+    update(locations[1]);
 }
 
 function goCave(){
@@ -102,5 +106,13 @@ function buyHealth(){
 }
 
 
-function buyWeapon(){}
+function buyWeapon(){
+    if (gold >= 30){
+        gold-= 30;
+    }
+}
+
+function fightSlime(){};
+
+function fightBeast(){};
 
