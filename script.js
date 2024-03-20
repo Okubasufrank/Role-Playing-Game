@@ -4,12 +4,11 @@ let gold = 50;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
-let inventory = ["sick"]; 
+let inventory = ["stick"]; 
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
-
 const text = document.querySelector("#text");
 const xpText = document.querySelector("#xpText");
 const healthText = document.querySelector("#heathlText");
@@ -19,10 +18,10 @@ const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
 const weapons =[
-    { name : "stick", power : 5,},
-    { name : "dagger", power : 30,},
-    { name : "claw hammer", power : 50,},
-    { name : "sword", power : 100,}
+    { name : "stick", power : 5 },
+    { name : "dagger", power : 30 },
+    { name : "claw hammer", power : 50 },
+    { name : "sword", power : 100 }
 ];
 
 const locations = [
@@ -68,18 +67,18 @@ button3.onclick = fightDragon;
     button3.onclick = goTown;
     text.innerText = "You enter the store.";*/
 
-function update(locations){
+function update(location){
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];
     button3.innerText = location["button text"][2];
     button1.onclick = location["button functions"][0];
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText = location.text;
+    text.innerText = location.text; 
 }
 
 function goTown(){
-    update(locations[0])
+    update(locations[0]);
 }
 
 function goStore(){
@@ -101,7 +100,7 @@ function buyHealth(){
         goldText.innerText = gold;
         healthText.innerText = health;
     } else{
-        text.innerText ="You do not have enough gold to buy health."
+        text.innerText ="You do not have enough gold to buy health.";
     }
 }
 
@@ -115,4 +114,4 @@ function buyWeapon(){
 function fightSlime(){};
 
 function fightBeast(){};
-
+ 
