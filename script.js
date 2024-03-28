@@ -125,7 +125,9 @@ function buyWeapon(){
 }
 }  
 
-function sellWeapon(){}
+function sellWeapon(inventory.length > 1){
+    
+}
 
 
 function fightSlime(){};
