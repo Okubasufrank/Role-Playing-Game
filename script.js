@@ -86,6 +86,7 @@ button3.onclick = fightDragon;
     text.innerText = "You enter the store.";*/
 
 function update(location){
+    monsterStats.computedStyleMap.display = 'none';
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];
     button3.innerText = location["button text"][2];
